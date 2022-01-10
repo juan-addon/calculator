@@ -8,3 +8,5 @@ Any changes or extra functionality that you want to add should only modify the h
 
 # View on Android.
 
+![Ios Calculator](https://user-images.githubusercontent.com/78773393/148718627-06c6afc3-73b6-43ad-8058-3b6e58ec90d4.png)
+
