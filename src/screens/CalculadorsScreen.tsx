@@ -15,6 +15,7 @@ export const CalculatorScreen = () => {
         btnAdd,
         btnCleanLastNumber,
         btnDivide,
+        btnPercentage,
         btnMultiply,
         btnSubtract,
         calculate
@@ -31,9 +32,9 @@ export const CalculatorScreen = () => {
             <Text adjustsFontSizeToFit={true} numberOfLines={1} style ={styles.result}>{number}</Text>
 
             <View style={styles.buttonRow}>
-                <ButtonComponent text = "C" color="#9B9B9B" action ={clean} />
+                <ButtonComponent text = "AC" color="#9B9B9B" action ={clean} />
                 <ButtonComponent text = "+/-" color="#9B9B9B" action ={ positiveOrNegativeNumber } />
-                <ButtonComponent text = "del" color="#9B9B9B" action ={btnCleanLastNumber} />
+                <ButtonComponent text = "%" color="#9B9B9B" action ={btnPercentage} />
                 <ButtonComponent text = "/" color="#FF9427" action ={btnDivide} />
             </View>   
 

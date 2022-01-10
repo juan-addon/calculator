@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 
 enum Operators{
-    add, subtract, multiply, divide
+    add, subtract, multiply, divide, Percentage
 }
 
 export const useCalculator = () => {
@@ -110,6 +110,11 @@ export const useCalculator = () => {
         LastOperation.current = Operators.add;
     }
 
+    const btnPercentage =() => {
+        const firstNumber = Number (number);
+        setNumber(`${firstNumber / 100 }`);
+    }
+
     const calculate = () => {
         const firstNumber = Number (number);
         const secondNumber = Number (beforeNumber);
@@ -124,7 +129,6 @@ export const useCalculator = () => {
             case Operators.multiply:
                 setNumber(`${firstNumber * secondNumber}`);
             break;
-
             case Operators.divide:
                 setNumber(`${secondNumber / firstNumber}`);
             break;
@@ -144,6 +148,7 @@ export const useCalculator = () => {
         btnDivide,
         btnMultiply,
         btnSubtract,
+        btnPercentage,
         calculate
     }
 }
